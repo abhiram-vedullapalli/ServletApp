@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
- <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-    <title >Addition</title>
-  </head>
+<head>
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+<title>Addition</title>
+<link rel="stylesheet" href="css/styling.css">
+</head>
 
-  <body>  
-  <h1 align ="center" style="color:olive;"> Addition </h1>
-  <form action="Add" method="get">
-  Enter first number : <input type="number" name="first">
-  <br><br>
-  Enter Second number : <input type="number" name="second"> 
-  <br><br>
-  <input type="submit" value="sum">
- <marquee behavior="alternate" direction="right" >Enter only integers</marquee>
-  </form>
-   </body>
+<body>
+	<div class="w3-container w3-black w3-center w3-padding-large">
+		<h1>Addition</h1>
+	</div>
+<div class="w3-display-container w3-center w3-black " style="margin:10%">
+	<form  class="w3-panel" action="Add" method="get">
+	
+		<label class="w3-panel">Enter first number :</label>
+		<input class="w3-input " type="number" name="first">
+		 <label class="w3-panel">Enter Second number:</label>
+		<input class="w3-input" type="number" name="second">
+		
+		 <input class="w3-button w3-white w3-text-black w3-panel" type="submit" value="Sum">
+
+	</form>
+	</div>
+</body>
 </html>

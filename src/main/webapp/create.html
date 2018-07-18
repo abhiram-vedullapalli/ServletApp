@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="ISO-8859-1">
+<title>Create Player</title>
+<link rel="stylesheet" href="css/styling.css">
+</head>
+<body bgcolor="black">
+<div class="w3-sidebar w3-bar-block w3-center w3-black" style="width:30%;">
+<h1 class="w3-bar-item w3-padding-large">PLAYERS</h1>
+<a href="crud.html" class="w3-bar-item w3-panel w3-button">Home</a>
+<a href="retrieve.html" class="w3-bar-item w3-panel w3-button">Retrieve Player</a>
+<a href="update.html" class="w3-bar-item w3-panel w3-button">Update Player</a>
+<a href="delete.html" class="w3-bar-item w3-panel w3-button">Delete Player</a>
+<a href="listall.html" class="w3-bar-item w3-panel w3-button">List All Players</a>
+</div>
+
+<div class="w3-container w3-black " style="margin-left: 40%;margin-right:25%;" >
+<h1 class="w3-center" style="margin-top:5vh;">CREATE PLAYER</h1>
+<form  class="w3-panel w3-center w3-black" action="Create" method="get" >
+	
+		<label class="w3-panel">ENTER NAME</label>
+		<input class="w3-input " type="text" name="name" required="required">
+		 <label class="w3-panel">ENTER TEAM NAME</label>
+		<input class="w3-input" type="text" name="team" required="required">
+		<label class="w3-panel">ENTER AGE</label>
+		<input class="w3-input" type="number" name="age" required="required">
+		
+		 <input class="w3-button w3-white w3-text-black w3-panel" type="submit" value="Create">
+		 
+
+	</form>
+</div>
+</body>
+</html>
