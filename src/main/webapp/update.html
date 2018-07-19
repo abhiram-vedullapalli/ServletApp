@@ -18,20 +18,17 @@
 
 <div class="w3-container w3-black " style="margin-left: 40%;margin-right:25%;" >
 <h1 class="w3-center" style="margin-top:5vh;">UPDATE PLAYER</h1>
-<form  class="w3-panel w3-center w3-black" action="Update" method="get">
+<form  class="w3-panel w3-center w3-black" action="Update" method="get" style= "float:center">
 	
-		<label class="w3-panel">ENTER NAME</label>
-		<input class="w3-input " type="text" name="name" required="required">
-		<label class="w3-text-yellow w3-panel">Enter the value of field you want to update</label>
-		 <label class="w3-panel">ENTER TEAM NAME</label>
-		<input class="w3-input" type="text" name="team">
-		<label class="w3-panel">ENTER AGE</label>
-		<input class="w3-input" type="number" name="age">
-		
-		 <input class="w3-button w3-white w3-text-black w3-panel" type="submit" value="Update">
+		<label class="w3-panel">ENTER NAME OF PLAYER</label>
+		<input class="w3-input " type="text" name="name" pattern="[A-Za-z]{2,}" title="Enter alphabets and > than 2 characters" required="required">
 		 
+		
+		 <input class="w3-button w3-white w3-text-black w3-panel" type="submit" value="ENTER">
+		
 
 	</form>
 </div>
+
 </body>
 </html>

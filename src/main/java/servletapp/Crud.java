@@ -35,30 +35,7 @@ public class Crud {
 
 		}
 	}
-	public static String updatePlayer(String name ,String team) {
-		if(players.containsKey(name)) {
-			players.get(name).setTeam(team);
-		
-			String result= "Player value updated";
-			return result;
-		}else {
-			String doNotExist = "Oops ...!!! Player does not Exist on list";
-			return doNotExist;
-
-		}
-	}
-	public static String updatePlayer(String name ,int age) {
-		if(players.containsKey(name)) {
-			String playAge = String.valueOf(age);
-			players.get(name).setAge(playAge);
-			String result= "Player value updated";
-			return result;
-		}else {
-			String doNotExist = "Oops ...!!! Player does not Exist on list";
-			return doNotExist;
-
-		}
-	}
+	
 
 	public static String deletePlayer(String name) {
 		if(players.containsKey(name)) {
@@ -72,10 +49,14 @@ public class Crud {
 	}
 
 	public static void listAllPlayers(PrintWriter out) {
-
+		if(players.isEmpty()) {
+			out.println("List is Empty. Create Players");
+		}
+		else {
 		for (HashMap.Entry<String, Details> entry : players.entrySet()) {
 			out.println(entry.getValue());
 			out.println("<br>");
+		}
 		}
 	}
 
