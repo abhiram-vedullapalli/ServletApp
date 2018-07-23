@@ -30,7 +30,7 @@ public class Details {
 		this.age = age;
 	}
 	public String toString() {
-		return "Name : " + name + " ; Team : " + team + "; Age : " + age ;
+		return "Name : " + name + "<br> Team : " + team + "<br> Age : " + age + "<br><br>" ;
 		
 	}
 }

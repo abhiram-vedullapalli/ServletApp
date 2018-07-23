@@ -27,7 +27,7 @@ public class Update extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
 			request.getRequestDispatcher("login.html").forward(request, response);;
@@ -43,9 +43,9 @@ public class Update extends HttpServlet {
 	
 	
 		
-		out.println("<html><head></head><body>");
+		out.println("<html><head></head><body align=\"center\">");
 		out.println("<h1 align=\"center\">Update details of " + info.getName() + " : </h1>");
-		out.println("<form align=\"center\" action=\"ChangeValues\" method=\"get\">");
+		out.println("<form align=\"center\" action=\"ChangeValues\" method=\"post\">");
 		out.println("<br> <br> Existing details are present in text field , edit details you want to change");
 		out.println("<br> <br> Name of Player : <input type=\"text\" name=\"name\" value="+info.getName()+" readonly=\"readonly\">");
 		out.println("<br> <br> Edit Team name : <input type=\"text\" pattern=\"[A-Za-z]{2,}\" title=\"Enter alphabets\" required=\"required\" name=\"team\" value=" +info.getTeam()+">");

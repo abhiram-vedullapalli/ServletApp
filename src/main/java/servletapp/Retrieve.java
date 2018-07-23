@@ -23,10 +23,10 @@ public class Retrieve extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);;
+			request.getRequestDispatcher("login.html").forward(request, response);
 			
 		}
 		else {
@@ -36,8 +36,8 @@ public class Retrieve extends HttpServlet {
 		String acName = Crud.anyCase(playName);
 		String details = Crud.retrievePlayer(acName);
 		
-		out.println("<html><head></head><body>");
-		out.println("<p> Details of Player : </p>");
+		out.println("<html><head></head><body align=\"center\">");
+		out.println("<h1 align=\"center\"> Details of Player : </h1>");
 		out.print(details);
 		out.println("<br> <br> <a href=\"create.html\">Create Player</a><br>");
 		out.println("<br> <br> <a href=\"retrieve.html\">Retrieve another Player</a><br>");

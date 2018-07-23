@@ -26,7 +26,7 @@ public class Create extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
 			request.getRequestDispatcher("login.html").forward(request, response);;
@@ -42,7 +42,7 @@ public class Create extends HttpServlet {
 		String acTeam = Crud.anyCase(playTeam);
 		String playAge = request.getParameter("age");
 		Crud.createPlayer(acName,acTeam,playAge);
-		out.println("<html><head></head><body>");
+		out.println("<html><head></head><body align=\"center\">");
 		out.println("<p> Player created </p>");
 	
 		out.println("<br> <br> <a href=\"create.html\">Create another Player</a><br>");

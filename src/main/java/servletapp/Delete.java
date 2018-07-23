@@ -22,7 +22,7 @@ public class Delete extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
 			request.getRequestDispatcher("login.html").forward(request, response);;
@@ -34,7 +34,7 @@ public class Delete extends HttpServlet {
 		String playName = request.getParameter("name");
 		String acName = Crud.anyCase(playName);
 		String result = Crud.deletePlayer(acName);
-		out.println("<html><head></head><body>");
+		out.println("<html><head></head><body align=\"center\">");
 		out.println("<p>" + result + "</p>");
 	
 		out.println("<br> <br> <a href=\"create.html\">Create Player</a><br>");
