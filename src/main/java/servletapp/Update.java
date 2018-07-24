@@ -40,7 +40,17 @@ public class Update extends HttpServlet {
 		String acName = Crud.anyCase(playName);
 		
 		Details info = Crud.players.get(acName);
-	
+		if(info == null) {
+			out.println("<html><head></head><body align=\"center\">");
+			out.println("<h1> " + acName + " was not Created at all or Deleted previously , Create another Player </h1>");
+			out.println("<br> <br> <a href=\"create.html\">Create another Player</a><br>");
+			out.println("<br> <a href=\"retrieve.html\">Retrieve Player</a><br>");
+
+			out.println("<br> <a href=\"delete.html\">Delete Player</a><br>");
+			out.println("<br> <a href=\"update.html\">Update Player</a><br>");
+			out.println("<br> <a href=\"listall.html\">List all Players</a><br>");
+
+		} else {
 	
 		
 		out.println("<html><head></head><body align=\"center\">");
@@ -55,6 +65,7 @@ public class Update extends HttpServlet {
 		
 		
 		out.println("</body></html>");
+		}
 	}
 	}
 }

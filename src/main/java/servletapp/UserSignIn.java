@@ -15,4 +15,8 @@ public class UserSignIn {
 			return false;
 		}
 	}
+	
+	public static void removeAllUsers() {
+		credentials.clear();
+	}
 } 

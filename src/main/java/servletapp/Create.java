@@ -40,7 +40,7 @@ public class Create extends HttpServlet {
 		String acName = Crud.anyCase(playName);
 		String playTeam = request.getParameter("team");
 		String acTeam = Crud.anyCase(playTeam);
-		String playAge = request.getParameter("age");
+		int playAge = Integer.parseInt(request.getParameter("age")); 
 		Crud.createPlayer(acName,acTeam,playAge);
 		out.println("<html><head></head><body align=\"center\">");
 		out.println("<p> Player created </p>");
@@ -57,4 +57,12 @@ public class Create extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			request.getRequestDispatcher("login.html").forward(request, response);
+			
+		}
+	}
+
 }

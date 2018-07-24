@@ -32,7 +32,7 @@ public class ChangeValues extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String playerName = request.getParameter("name");
 		String playerTeam = request.getParameter("team");
-		String playerAge = request.getParameter("age");
+		int playerAge = Integer.parseInt(request.getParameter("age"));
 		
 		out.println("<html><head></head><body align=\"center\">");
 		out.println("<h1>" + Crud.updatePlayer(playerName,playerTeam,playerAge)+ "</h1>");

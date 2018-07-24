@@ -6,7 +6,7 @@ import java.util.*;
 public class Crud {
 	static HashMap<String, Details> players = new HashMap<>();
 
-	public static void createPlayer(String name, String team, String age) {
+	public static void createPlayer(String name, String team, int age) {
 
 		players.put(name, new Details(name, team, age));
 
@@ -23,7 +23,7 @@ public class Crud {
 		
 	}
 
-	public static String updatePlayer(String name ,String team , String age) {
+	public static String updatePlayer(String name ,String team , int age) {
 		if(players.containsKey(name)) {
 			players.get(name).setTeam(team);
 			players.get(name).setAge(age);

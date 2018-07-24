@@ -47,5 +47,13 @@ public class Delete extends HttpServlet {
 	}
 
 	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			request.getRequestDispatcher("login.html").forward(request, response);
+			
+		}
+	}
+
 
 }

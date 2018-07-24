@@ -4,8 +4,8 @@ public class Details {
 	
 	private String name;
 	private String team;
-	private String age;
-	Details(String name ,String team, String age){
+	private int age;
+	Details(String name ,String team, int age){
 		this.name = name;
 		this.team = team;
 		this.age = age;
@@ -23,10 +23,10 @@ public class Details {
 	public void setTeam(String n) {
 		this.team = n;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	public String toString() {
