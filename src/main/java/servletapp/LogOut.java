@@ -24,7 +24,7 @@ public class LogOut extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setHeader("Cache-Control","no-cache,no-store");
+		response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 		response.setHeader("Pragma", "no-cache");
 		request.getSession().invalidate();
 		RequestDispatcher rd = request.getRequestDispatcher("login.html");

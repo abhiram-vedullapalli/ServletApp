@@ -54,7 +54,7 @@ public class Crud {
 		}
 		else {
 		for (HashMap.Entry<String, Details> entry : players.entrySet()) {
-			out.println(entry.getValue());
+			out.println("<p> " + entry.getValue() + "</p> <form action=\"DeleteButton\" method=\"post\"> <input type=\"hidden\" value="+ entry.getKey() +" name=\"username\"> <input type=\"submit\" value=\"Delete this Player\"></form>");
 			out.println("<br>");
 		}
 		}
