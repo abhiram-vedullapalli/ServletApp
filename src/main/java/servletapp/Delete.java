@@ -41,7 +41,7 @@ public class Delete extends HttpServlet {
 		out.println("<br> <br> <a href=\"retrieve.html\">Retrieve Player</a><br>");
 		out.println("<br> <br> <a href=\"delete.html\">Delete another Player</a><br>");
 		out.println("<br> <br> <a href=\"update.html\">Update Player</a><br>");
-		out.println("<br> <br> <a href=\"listall.html\">List all Players</a><br>");
+		out.println("<br> <br> <a href=\"ListAll\">List all Players</a><br>");
 		
 		out.println("</body></html>");
 	}

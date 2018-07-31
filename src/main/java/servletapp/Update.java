@@ -48,7 +48,7 @@ public class Update extends HttpServlet {
 
 			out.println("<br> <a href=\"delete.html\">Delete Player</a><br>");
 			out.println("<br> <a href=\"update.html\">Update Player</a><br>");
-			out.println("<br> <a href=\"listall.html\">List all Players</a><br>");
+			out.println("<br> <a href=\"ListAll\">List all Players</a><br>");
 
 		} else {
 	

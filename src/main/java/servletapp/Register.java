@@ -21,7 +21,8 @@ public class Register extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
+		response.setHeader("Pragma", "no-cache");
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
 		System.out.println(userName);

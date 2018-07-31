@@ -35,10 +35,10 @@ public class ListAll extends HttpServlet {
 		out.println("<html><head></head><body align=\"center\">");
 		Crud.listAllPlayers(out);
 	
-		out.println("<br> <br> <a href=\"create.html\">Create Player</a><br>");
-		out.println("<br> <br> <a href=\"retrieve.html\">Retrieve Player</a><br>");
-		out.println("<br> <br> <a href=\"delete.html\">Delete Player</a><br>");
-		out.println("<br> <br> <a href=\"update.html\">Update Player</a><br>");
+		out.println("<br> <br> <a href=\"create.html\">Create Player</a>");
+		out.println("<a href=\"retrieve.html\">Retrieve Player</a>");
+		out.println("<a href=\"delete.html\">Delete Player</a>");
+		out.println("<a href=\"update.html\">Update Player</a>");
 	
 		
 		out.println("</body></html>");
