@@ -20,13 +20,11 @@ urlPatterns = "/Retrieve")
 public class Retrieve extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);
+			request.getRequestDispatcher("HomePage").forward(request, response);
 			
 		}
 		else {
@@ -39,22 +37,23 @@ public class Retrieve extends HttpServlet {
 		out.println("<html><head></head><body align=\"center\">");
 		out.println("<h1 align=\"center\"> Details of Player : </h1>");
 		out.print(details);
-		out.println("<br> <br> <a href=\"create.html\">Create Player</a><br>");
-		out.println("<br> <br> <a href=\"retrieve.html\">Retrieve another Player</a><br>");
-		out.println("<br> <br> <a href=\"delete.html\">Delete Player</a><br>");
-		out.println("<br> <br> <a href=\"update.html\">Update Player</a><br>");
-		out.println("<br> <br> <a href=\"listall.html\">List all Players</a><br>");
+		out.println("<br> <br> <a href=\"createplayer.html\">Create Player</a><br>");
+		out.println("<br> <br> <a href=\"retrieveplayer.html\">Retrieve another Player</a><br>");
+		out.println("<br> <br> <a href=\"deleteplayer.html\">Delete Player</a><br>");
+		out.println("<br> <br> <a href=\"updateplayer.html\">Update Player</a><br>");
+		out.println("<br> <br> <a href=\"listallplayer.html\">List all Players</a><br>");
 
 		out.println("</body></html>");
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);
+			request.getRequestDispatcher("HomePage").forward(request, response);
 			
+		}else {
+			response.sendRedirect("retrieveplayer");
 		}
 	}
 }

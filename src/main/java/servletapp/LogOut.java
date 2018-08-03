@@ -27,7 +27,7 @@ public class LogOut extends HttpServlet {
 		response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 		response.setHeader("Pragma", "no-cache");
 		request.getSession().invalidate();
-		RequestDispatcher rd = request.getRequestDispatcher("login.html");
+		RequestDispatcher rd = request.getRequestDispatcher("HomePage");
 		rd.forward(request, response);
 	}
 

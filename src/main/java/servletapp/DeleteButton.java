@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import servletapp.Crud;
 /**
  * Servlet implementation class DeleteButton
@@ -21,6 +23,15 @@ public class DeleteButton extends HttpServlet {
 		String playerName = request.getParameter("username");
 		Crud.deletePlayer(playerName);
 		response.sendRedirect("ListAll");
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			request.getRequestDispatcher("HomePage").forward(request, response);
+			
+		}else {
+			request.getRequestDispatcher("ListAll").forward(request, response);
+		}
 	}
 
 }

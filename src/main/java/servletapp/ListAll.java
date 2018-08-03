@@ -25,7 +25,7 @@ public class ListAll extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);
+			request.getRequestDispatcher("HomePage").forward(request, response);
 			
 		}
 		else {
@@ -35,10 +35,10 @@ public class ListAll extends HttpServlet {
 		out.println("<html><head></head><body align=\"center\">");
 		Crud.listAllPlayers(out);
 	
-		out.println("<br> <br> <a href=\"create.html\">Create Player</a>");
-		out.println("<a href=\"retrieve.html\">Retrieve Player</a>");
-		out.println("<a href=\"delete.html\">Delete Player</a>");
-		out.println("<a href=\"update.html\">Update Player</a>");
+		out.println("<br> <br> <a href=\"createplayer.html\">Create Player</a>");
+		out.println("<a href=\"retrieveplayer.html\">Retrieve Player</a>");
+		out.println("<a href=\"deleteplayer.html\">Delete Player</a>");
+		out.println("<a href=\"updateplayer.html\">Update Player</a>");
 	
 		
 		out.println("</body></html>");

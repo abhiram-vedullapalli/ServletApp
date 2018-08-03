@@ -30,7 +30,7 @@ public class Update extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);;
+			request.getRequestDispatcher("loginpage.html").forward(request, response);;
 			
 		}
 		else {
@@ -43,11 +43,11 @@ public class Update extends HttpServlet {
 		if(info == null) {
 			out.println("<html><head></head><body align=\"center\">");
 			out.println("<h1> " + acName + " was not Created at all or Deleted previously , Create another Player </h1>");
-			out.println("<br> <br> <a href=\"create.html\">Create another Player</a><br>");
+			out.println("<br> <br> <a href=\"createplayer.html\">Create another Player</a><br>");
 			out.println("<br> <a href=\"retrieve.html\">Retrieve Player</a><br>");
 
-			out.println("<br> <a href=\"delete.html\">Delete Player</a><br>");
-			out.println("<br> <a href=\"update.html\">Update Player</a><br>");
+			out.println("<br> <a href=\"deleteplayer.html\">Delete Player</a><br>");
+			out.println("<br> <a href=\"updateplayer.html\">Update Player</a><br>");
 			out.println("<br> <a href=\"ListAll\">List all Players</a><br>");
 
 		} else {
@@ -67,5 +67,14 @@ public class Update extends HttpServlet {
 		out.println("</body></html>");
 		}
 	}
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession(false);
+		if(session == null) {
+			request.getRequestDispatcher("HomePage").forward(request, response);
+			
+		}else {
+			request.getRequestDispatcher("Update").forward(request, response);
+		}
 	}
 }

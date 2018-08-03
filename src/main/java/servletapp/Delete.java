@@ -25,7 +25,7 @@ public class Delete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);;
+			request.getRequestDispatcher("HomePage").forward(request, response);;
 			
 		}
 		else {
@@ -37,10 +37,10 @@ public class Delete extends HttpServlet {
 		out.println("<html><head></head><body align=\"center\">");
 		out.println("<p>" + result + "</p>");
 	
-		out.println("<br> <br> <a href=\"create.html\">Create Player</a><br>");
-		out.println("<br> <br> <a href=\"retrieve.html\">Retrieve Player</a><br>");
-		out.println("<br> <br> <a href=\"delete.html\">Delete another Player</a><br>");
-		out.println("<br> <br> <a href=\"update.html\">Update Player</a><br>");
+		out.println("<br> <br> <a href=\"createplayer.html\">Create Player</a><br>");
+		out.println("<br> <br> <a href=\"retrieveplayer.html\">Retrieve Player</a><br>");
+		out.println("<br> <br> <a href=\"deleteplayer.html\">Delete another Player</a><br>");
+		out.println("<br> <br> <a href=\"updateplayer.html\">Update Player</a><br>");
 		out.println("<br> <br> <a href=\"ListAll\">List all Players</a><br>");
 		
 		out.println("</body></html>");
@@ -50,8 +50,10 @@ public class Delete extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("login.html").forward(request, response);
+			request.getRequestDispatcher("HomePage").forward(request, response);
 			
+		}else {
+			request.getRequestDispatcher("Delete").forward(request, response);
 		}
 	}
 

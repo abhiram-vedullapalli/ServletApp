@@ -25,11 +25,11 @@ public class Register extends HttpServlet {
 		response.setHeader("Pragma", "no-cache");
 		String userName = request.getParameter("username");
 		String password = request.getParameter("password");
-		System.out.println(userName);
-		System.out.println(password);
+		System.out.println("Username is " + userName);
+		System.out.println("Password is" + password);
 		UserSignIn.addUser(userName, password);
-		System.out.println(UserSignIn.credentials.get(userName));
-		response.sendRedirect("login.html");
+	
+		response.sendRedirect("loginpage.html");
 	}
 
 }
