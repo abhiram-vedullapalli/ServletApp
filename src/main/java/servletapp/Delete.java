@@ -25,7 +25,8 @@ public class Delete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("HomePage").forward(request, response);;
+			response.sendRedirect("HomePage");
+
 			
 		}
 		else {
@@ -50,10 +51,10 @@ public class Delete extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("HomePage").forward(request, response);
+			response.sendRedirect("HomePage");
 			
 		}else {
-			request.getRequestDispatcher("Delete").forward(request, response);
+			response.sendRedirect("deleteplayer");
 		}
 	}
 

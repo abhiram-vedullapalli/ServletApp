@@ -30,7 +30,8 @@ public class Update extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("loginpage.html").forward(request, response);;
+			response.sendRedirect("HomePage");
+
 			
 		}
 		else {
@@ -71,10 +72,12 @@ public class Update extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("HomePage").forward(request, response);
+			response.sendRedirect("HomePage");
+
 			
 		}else {
-			request.getRequestDispatcher("Update").forward(request, response);
+			response.sendRedirect("updateplayer");
+
 		}
 	}
 }

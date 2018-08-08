@@ -37,8 +37,8 @@ public class Login extends HttpServlet {
 			out.println("<html><head><title>Invalid User</title></head>");
 			out.println("<body align=\"center\">");
 			out.println("<h1>Username or Password is incorrect . Please try again</h1>");
-			out.println("<br> <br> <a href=\"loginpage.html\">Log In</a><br>");
-			out.println("<br> <br> <a href=\"HomePage\">Register</a><br>");
+			out.println("<br> <br> <a href=\"loginpage.html\">Try Logging In again</a><br>");
+			out.println("<br> <br> <a href=\"HomePage\">Still not Registered ??</a><br>");
 
 		}
 	} 

@@ -24,7 +24,7 @@ public class Retrieve extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("HomePage").forward(request, response);
+			response.sendRedirect("HomePage");
 			
 		}
 		else {
@@ -50,10 +50,19 @@ public class Retrieve extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if(session == null) {
-			request.getRequestDispatcher("HomePage").forward(request, response);
+			response.sendRedirect("HomePage");
 			
 		}else {
 			response.sendRedirect("retrieveplayer");
 		}
 	}
 }
+
+/* No Session
+ * getSession() - thread is suspended for both post and get requests. No response from server back to client
+ * 
+ * 
+ * 
+ * */
+
+
