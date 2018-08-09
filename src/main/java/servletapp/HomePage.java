@@ -25,8 +25,8 @@ public class HomePage extends HttpServlet {
 		out.println("<body><div align=\"center\">");
 		out.println("<h1>New User ? Register Here ... </h1>");
 		out.println("<form action=\"Register\" method=\"post\">");
-		out.println("Enter Name : <input type=\"text\" name=\"username\" required=\"required\" pattern=\"[a-z]{2,}\" title=\"Enter lower case letters\"> <br><br>\r\n" );
-		out.println("Enter Password : <input type=\"password\" name=\"password\" required=\"required\">");
+		out.println("Enter Name : <input type=\"text\" name=\"username\" required=\"required\" pattern=\"[a-z]{3,}\" title=\"Enter lower case letters & min of 3 characters\"> <br><br>\r\n" );
+		out.println("Enter Password : <input type=\"password\" name=\"password\"  required=\"required\">");
 		out.println("<br><br>\r\n" + "<input type=\"submit\" value=\"Register\">");
 		out.println("<a href=\"loginpage.html\" style=\"color: Black;font-size: x-large; font-style: oblique; font: bolder;\" >Already Registered ? Sign In</a>");
         out.println("</form>\r\n" + "</div>\r\n" + "</body>\r\n" + " </html>");
